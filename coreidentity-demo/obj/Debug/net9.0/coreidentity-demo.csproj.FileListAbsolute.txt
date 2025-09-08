@@ -1,0 +1,9 @@
+C:\Users\ravin\OneDrive\Desktop\Authentication\coreidentity-demo\obj\Debug\net9.0\coreidentity-demo.csproj.AssemblyReference.cache
+C:\Users\ravin\OneDrive\Desktop\Authentication\coreidentity-demo\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\ravin\OneDrive\Desktop\Authentication\coreidentity-demo\obj\Debug\net9.0\coreidentity-demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ravin\OneDrive\Desktop\Authentication\coreidentity-demo\obj\Debug\net9.0\coreidentity-demo.AssemblyInfoInputs.cache
+C:\Users\ravin\OneDrive\Desktop\Authentication\coreidentity-demo\obj\Debug\net9.0\coreidentity-demo.AssemblyInfo.cs
+C:\Users\ravin\OneDrive\Desktop\Authentication\coreidentity-demo\obj\Debug\net9.0\coreidentity-demo.csproj.CoreCompileInputs.cache
+C:\Users\ravin\OneDrive\Desktop\Authentication\coreidentity-demo\obj\Debug\net9.0\coreidentity-demo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ravin\OneDrive\Desktop\Authentication\coreidentity-demo\obj\Debug\net9.0\coreidentity-demo.RazorAssemblyInfo.cache
+C:\Users\ravin\OneDrive\Desktop\Authentication\coreidentity-demo\obj\Debug\net9.0\coreidentity-demo.RazorAssemblyInfo.cs
