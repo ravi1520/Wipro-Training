@@ -1,0 +1,30 @@
+@model SecureShop.ViewModels.ProductDetailsViewModel
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h2>@Model.Product.Name</h2>
+<p>@Model.Product.Description</p>
+<p><strong>Price:</strong> @Model.Product.Price.ToString("C")</p>
+
+<h4>Reviews</h4>
+@if (Model.Reviews.Any())
+{
+    <ul>
+        @foreach (var r in Model.Reviews)
+        {
+            <li>
+                <strong>@r.Username:</strong> @r.Content
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No reviews yet.</p>
+}
+
+<a asp-action="CreateReview" asp-route-productId="@Model.Product.Id" class="btn btn-secondary">
+    Add Review
+</a>
