@@ -1,0 +1,12 @@
+@model RazorPagesApp.Models.Product
+
+<div>
+    <h3>@Model.Name</h3>
+    <p>@Model.Description</p>
+    <ul>
+        @foreach (var c in Model.Categories)
+        {
+            <li>@c.CategoryName</li>
+        }
+    </ul>
+</div>
