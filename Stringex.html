@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//    ch='a';
+//    document.write(ch);
+
+//    let greeting = "Hello, World!";
+//    document.write(greeting);
+//    let name="Ravi";
+//    let message = `Hello, ${name}!`;
+//    document.write(message);
+
+// str1="India is a developed country";
+//     document.write(str1.toUpperCase());
+//     document.write("<br>");
+//     str2="INDIA IS A DEVELOPED COUNTRY";
+//     document.write(str2.toLowerCase());
+//     document.write("<br>");
+// str3="  Hello World!  ";
+//     document.write(str3.length);
+//     document.write("<br>");
+// let christmas=new Date("2025-12-25T10:00:00");
+// document.write(christmas);
+ //let currentDate = new Date();
+// // document.write(currentDate);   
+// document.write(currentDate.getFullYear());
+//  document.write("<br>");
+//  document.write(currentDate.getMonth());    
+//   document.write("<br>");
+//  document.write(currentDate.getDate());
+//   document.write("<br>");
+//  document.write(currentDate.getHours());
+//   document.write("<br>");
+//  document.write(currentDate.getMinutes());
+//   document.write("<br>");
+// document.write(currentDate.getSeconds());
+
+// document.write(currentDate.toDateString());
+// document.write("<br>"); 
+// document.write(currentDate.toTimeString());
+// document.write("<br>"); 
+// document.write(currentDate.toLocaleDateString());
+// document.write("<br>");
+// function createTimers() {
+//    for (let i = 1; i <= 5; i++) {
+//         setTimeout(() => {
+//             document.write(`Timer ${i} executed after ${i * 1000} milliseconds`);
+//         }, i * 1000);
+//     }
+
+
+// }
+// createTimers();
+
+   function counter(){
+    let count = 0;
+    return function() {
+        count++;
+      return count;
+    };
+   }
+   const increment = counter();
+   document.write(increment()); // 1     
+   document.write(increment()); // 2
+   document.write(increment()); // 3       
+
+
+
+    </script>
+    
+</body>
+</html>

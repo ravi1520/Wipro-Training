@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function demoVariables(){
+        var x = 10; // Global variable
+        let y = 20; // Block-scoped variable
+        const z = 30; // Constant variable
+
+        document.write("Global Variable x: " + x + "<br>");
+        document.write("Block-scoped Variable y: " + y + "<br>");
+        document.write("Constant Variable z: " + z + "<br>");
+
+        if (true) {
+            var a = 40; // Still global
+            let b = 50; // Block-scoped
+            const c = 60; // Block-scoped constant
+
+            document.write("Inside block - a: " + a + "<br>");
+            document.write("Inside block - b: " + b + "<br>");
+            document.write("Inside block - c: " + c + "<br>");
+        }
+
+        document.write("Outside block - a: " + a + "<br>");
+        // document.write("Outside block - b: " + b + "<br>"); // This will cause an error
+        // document.write("Outside block - c: " + c + "<br>"); // This will cause an error
+    }
+demoVariables();
+</script>
+
+    
+</body>
+</html>
