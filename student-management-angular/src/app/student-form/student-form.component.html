@@ -1,0 +1,7 @@
+<h3>{{ student ? 'Edit Student' : 'Add Student' }}</h3>
+<form (ngSubmit)="onSubmit()" #studentForm="ngForm">
+  <input type="text" [(ngModel)]="tempStudent.name" name="name" placeholder="Name" required>
+  <input type="number" [(ngModel)]="tempStudent.age" name="age" placeholder="Age" required>
+  <input type="text" [(ngModel)]="tempStudent.course" name="course" placeholder="Course" required>
+  <button type="submit">Save</button>
+</form>

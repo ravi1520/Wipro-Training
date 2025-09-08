@@ -1,0 +1,25 @@
+<h2>Student List</h2>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Course</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{ student.name }}</td>
+    <td>{{ student.age }}</td>
+    <td>{{ student.course }}</td>
+    <td>
+      <button (click)="editStudent(student)">Edit</button>
+      <button (click)="deleteStudent(student.id)">Delete</button>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<app-student-form 
+  [student]="selectedStudent" 
+  (save)="onSave($event)">
+</app-student-form>

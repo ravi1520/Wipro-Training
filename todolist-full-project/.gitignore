@@ -1,0 +1,9 @@
+
+/node_modules
+/dist
+/.angular
+/.vscode
+/package-lock.json
+/npm-debug.log
+/.idea
+.DS_Store

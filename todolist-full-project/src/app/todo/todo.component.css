@@ -1,0 +1,37 @@
+.todo-container {
+  width: 300px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+input {
+  width: 200px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background: #f0f0f0;
+  margin: 5px 0;
+  padding: 7px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 3px 7px;
+  border-radius: 3px;
+}
