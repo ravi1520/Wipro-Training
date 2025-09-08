@@ -1,0 +1,7 @@
+<div class="container">
+  <header><h1>{{ title }}</h1><p>Angular 20 demo (standalone components)</p></header>
+  <main class="grid">
+    <section><app-student-form [editing]="editing" (done)="stopEdit()"></app-student-form></section>
+    <section><app-student-list (edit)="startEdit($event)"></app-student-list></section>
+  </main>
+</div>

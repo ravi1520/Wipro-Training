@@ -1,0 +1,11 @@
+<div class="form-card">
+  <h2>{{ editing ? 'Edit Student' : 'Add Student' }}</h2>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <input type="hidden" formControlName="id" />
+    <div class="row"><label>Name</label><input formControlName="name"/><small *ngIf="f.name.touched && f.name.invalid">Name required</small></div>
+    <div class="row"><label>Email</label><input formControlName="email"/><small *ngIf="f.email.touched && f.email.invalid">Valid email required</small></div>
+    <div class="row"><label>Course</label><input formControlName="course"/><small *ngIf="f.course.touched && f.course.invalid">Course required</small></div>
+    <div class="row"><label>Year</label><input type="number" formControlName="year" min="1" max="4"/><small *ngIf="f.year.touched && f.year.invalid">Year 1-4</small></div>
+    <div class="buttons"><button type="submit">{{ editing ? 'Update' : 'Add' }}</button><button type="button" class="secondary" (click)="cancel()">Cancel</button></div>
+  </form>
+</div>

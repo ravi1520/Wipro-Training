@@ -1,0 +1,21 @@
+<div class="list-card">
+  <h2>Student List</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Name</th><th>Email</th><th>Course</th><th>Year</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of (students$ | async)">
+        <td>{{ s.id }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.email }}</td>
+        <td>{{ s.course }}</td>
+        <td>{{ s.year }}</td>
+        <td class="actions">
+          <button (click)="onEdit(s)">Edit</button>
+          <button class="danger" (click)="onDelete(s.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
