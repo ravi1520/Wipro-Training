@@ -1,0 +1,11 @@
+@model BookstoreApp.Models.Book
+
+<h2>Edit Book</h2>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="BookId" />
+    <label>Title:</label><input asp-for="Title" class="form-control" /><br />
+    <label>Author:</label><input asp-for="Author" class="form-control" /><br />
+    <label>Price:</label><input asp-for="Price" class="form-control" /><br />
+    <label>Quantity:</label><input asp-for="Quantity" class="form-control" /><br />
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
