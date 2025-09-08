@@ -1,0 +1,10 @@
+@model IEnumerable<OnlineBookStore.Models.Book>
+<h2>Books</h2>
+<ul>
+@foreach (var book in Model)
+{
+    <li>
+        <a asp-action="Details" asp-route-id="@book.Id">@book.Title</a> - ₹@book.Price
+    </li>
+}
+</ul>

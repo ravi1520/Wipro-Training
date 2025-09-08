@@ -1,0 +1,52 @@
+@model IEnumerable<OnlineBookStore.Models.CartItem>
+@{
+    ViewData["Title"] = "Cart";
+    var total = Model?.Sum(i => i.Price * i.Quantity) ?? 0m;
+}
+<h2>Your Cart</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info">Your cart is empty.</div>
+    <a class="btn btn-primary" asp-controller="Books" asp-action="Index">Continue Shopping</a>
+}
+else
+{
+    <table class="table table-striped align-middle">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th style="width:120px">Quantity</th>
+                <th style="width:120px">Price</th>
+                <th style="width:120px">Subtotal</th>
+                <th style="width:140px"></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Title</td>
+                <td>@i.Quantity</td>
+                <td>₹@i.Price</td>
+                <td>₹@(i.Price * i.Quantity)</td>
+                <td>
+                    <a class="btn btn-sm btn-outline-secondary" asp-action="AddToCart" asp-route-id="@i.BookId" asp-route-title="@i.Title" asp-route-price="@i.Price">+</a>
+                    <a class="btn btn-sm btn-outline-secondary" asp-action="Remove" asp-route-id="@i.BookId">-</a>
+                    <a class="btn btn-sm btn-outline-danger" asp-action="RemoveAll" asp-route-id="@i.BookId">Remove</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3" class="text-end">Total:</th>
+                <th>₹@total</th>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <a class="btn btn-secondary" asp-controller="Books" asp-action="Index">Continue Shopping</a>
+    <a class="btn btn-success" asp-controller="Orders" asp-action="Checkout">Proceed to Checkout</a>
+}

@@ -1,0 +1,37 @@
+@model IEnumerable<OnlineBookStore.Models.Book>
+@{
+    ViewData["Title"] = "Books";
+}
+<h2 class="mb-3">Books</h2>
+
+<div class="mb-3">
+    <a class="btn btn-success" asp-action="Create">+ Add Book</a>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">No books found.</div>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var b in Model)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@b.Title</h5>
+                        <p class="card-text text-muted mb-1">Author: @b.Author</p>
+                        <p class="card-text mb-2"><strong>₹@b.Price</strong></p>
+                        <a class="btn btn-outline-secondary btn-sm" asp-action="Details" asp-route-id="@b.Id">Details</a>
+                        <a class="btn btn-primary btn-sm"
+                           asp-controller="Cart" asp-action="AddToCart"
+                           asp-route-id="@b.Id" asp-route-title="@b.Title" asp-route-price="@b.Price">
+                            Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
