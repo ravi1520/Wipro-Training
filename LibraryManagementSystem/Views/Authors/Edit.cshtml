@@ -1,0 +1,43 @@
+@model LibraryManagementSystem.Models.Author
+
+@{
+    ViewData["Title"] = "Edit Author";
+}
+
+<h2>Edit Author</h2>
+
+<input type="hidden" id="Id" value="@Model.Id" />
+
+<div class="form-group">
+    <label>Name</label>
+    <input type="text" id="Name" value="@Model.Name" class="form-control" />
+</div>
+
+<button type="button" class="btn btn-primary" onclick="updateAuthor()">Update</button>
+<a asp-action="Index" class="btn btn-secondary">Cancel</a>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function updateAuthor() {
+        $.ajax({
+            url: '/Authors/Edit',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                Id: $("#Id").val(),
+                Name: $("#Name").val()
+            }),
+            success: function (res) {
+                if (res.success) {
+                    alert(res.message);
+                    window.location.href = '/Authors/Index';
+                } else {
+                    alert("Error: " + res.message);
+                }
+            },
+            error: function () {
+                alert("Something went wrong while updating author.");
+            }
+        });
+    }
+</script>

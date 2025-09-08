@@ -1,0 +1,49 @@
+@model IEnumerable<LibraryManagementSystem.Models.Genre>
+<h2>Genres</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="genreTable">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>
+                    <a href="/Genres/Details/@item.Id">Details</a> |
+                    <a href="/Genres/Edit/@item.Id">Edit</a> |
+                    <button onclick="deleteGenre(@item.Id)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button id="addGenreBtn">Add Genre (AJAX)</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $("#addGenreBtn").click(function(){
+        $.ajax({
+            url: '/Genres/Create',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ name: "New Genre" }),
+            success: function(res){
+                alert(res.message);
+                location.reload();
+            }
+        });
+    });
+
+    function deleteGenre(id){
+        $.post('/Genres/Delete/' + id, function(res){
+            alert(res.message);
+            location.reload();
+        });
+    }
+</script>

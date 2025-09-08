@@ -1,0 +1,49 @@
+@model IEnumerable<LibraryManagementSystem.Models.Author>
+<h2>Authors</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="authorTable">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>
+                    <a href="/Authors/Details/@item.Id">Details</a> |
+                    <a href="/Authors/Edit/@item.Id">Edit</a> |
+                    <button onclick="deleteAuthor(@item.Id)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button id="addAuthorBtn">Add Author (AJAX)</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $("#addAuthorBtn").click(function(){
+        $.ajax({
+            url: '/Authors/Create',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ name: "New Author" }),
+            success: function(res){
+                alert(res.message);
+                location.reload();
+            }
+        });
+    });
+
+    function deleteAuthor(id){
+        $.post('/Authors/Delete/' + id, function(res){
+            alert(res.message);
+            location.reload();
+        });
+    }
+</script>
