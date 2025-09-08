@@ -1,0 +1,19 @@
+@page
+@model RazorPagesDemo.Pages.ItemsModel
+@{
+    ViewData["Title"] = "Items List";
+}
+
+<h2>Items List</h2>
+
+<ul>
+@foreach (var item in Model.Items)
+{
+    <li>@item</li>
+}
+</ul>
+
+<form method="post">
+    <input type="text" name="NewItem" placeholder="Enter item" required />
+    <button type="submit">Add</button>
+</form>
