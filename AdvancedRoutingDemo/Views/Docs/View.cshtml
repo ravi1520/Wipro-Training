@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Document";
+    var docId = (string?)Context.Request.RouteValues["docId"] ?? "(missing)";
+}
+<div class="p-4 bg-white rounded shadow-sm">
+    <h1 class="h4 mb-3">Document Viewer</h1>
+    <p><strong>Document ID:</strong> @docId</p>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Back</a>
+</div>

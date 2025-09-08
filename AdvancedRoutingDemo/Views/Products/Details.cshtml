@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Product Details";
+    var category = (string?)Context.Request.RouteValues["category"] ?? "(none)";
+    var id = (string?)Context.Request.RouteValues["id"] ?? "(none)";
+}
+<div class="p-4 bg-white rounded shadow-sm">
+    <h1 class="h4 mb-3">Product Details</h1>
+    <dl class="row">
+        <dt class="col-sm-3">Category</dt>
+        <dd class="col-sm-9">@category</dd>
+        <dt class="col-sm-3">Product ID</dt>
+        <dd class="col-sm-9">@id</dd>
+    </dl>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Back</a>
+</div>

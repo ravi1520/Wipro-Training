@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    var role = (string?)Context.Request.RouteValues["role"] ?? "user";
+    var heading = role?.ToLower() == "admin" ? "Admin Dashboard" : "User Dashboard";
+}
+<div class="p-4 bg-white rounded shadow-sm">
+    <h1 class="h4 mb-3">@heading</h1>
+    @if (role?.ToLower() == "admin")
+    {
+        <p>Welcome, Admin! Here you could see management tools.</p>
+    }
+    else
+    {
+        <p>Welcome! Here you could see your personalized info.</p>
+    }
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Back</a>
+</div>

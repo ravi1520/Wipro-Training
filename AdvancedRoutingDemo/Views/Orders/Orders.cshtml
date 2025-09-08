@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "User Orders";
+    var username = (string?)Context.Request.RouteValues["username"] ?? "(unknown)";
+}
+<div class="p-4 bg-white rounded shadow-sm">
+    <h1 class="h4 mb-3">Orders for @username</h1>
+    <p>This is where you’d list @username’s orders.</p>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Back</a>
+</div>

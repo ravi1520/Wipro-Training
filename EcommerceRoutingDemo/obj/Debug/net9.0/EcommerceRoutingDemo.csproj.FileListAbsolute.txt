@@ -1,0 +1,10 @@
+C:\Users\ravin\OneDrive\Desktop\Products\EcommerceRoutingDemo\obj\Debug\net9.0\EcommerceRoutingDemo.csproj.AssemblyReference.cache
+C:\Users\ravin\OneDrive\Desktop\Products\EcommerceRoutingDemo\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\ravin\OneDrive\Desktop\Products\EcommerceRoutingDemo\obj\Debug\net9.0\MvcTestingAppManifest.json
+C:\Users\ravin\OneDrive\Desktop\Products\EcommerceRoutingDemo\obj\Debug\net9.0\EcommerceRoutingDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ravin\OneDrive\Desktop\Products\EcommerceRoutingDemo\obj\Debug\net9.0\EcommerceRoutingDemo.AssemblyInfoInputs.cache
+C:\Users\ravin\OneDrive\Desktop\Products\EcommerceRoutingDemo\obj\Debug\net9.0\EcommerceRoutingDemo.AssemblyInfo.cs
+C:\Users\ravin\OneDrive\Desktop\Products\EcommerceRoutingDemo\obj\Debug\net9.0\EcommerceRoutingDemo.csproj.CoreCompileInputs.cache
+C:\Users\ravin\OneDrive\Desktop\Products\EcommerceRoutingDemo\obj\Debug\net9.0\EcommerceRoutingDemo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ravin\OneDrive\Desktop\Products\EcommerceRoutingDemo\obj\Debug\net9.0\EcommerceRoutingDemo.RazorAssemblyInfo.cache
+C:\Users\ravin\OneDrive\Desktop\Products\EcommerceRoutingDemo\obj\Debug\net9.0\EcommerceRoutingDemo.RazorAssemblyInfo.cs
