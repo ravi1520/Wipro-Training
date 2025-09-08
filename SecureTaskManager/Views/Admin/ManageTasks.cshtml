@@ -1,0 +1,47 @@
+@model IEnumerable<TaskItem>
+@{
+    ViewData["Title"] = "Manage Tasks";
+    Layout = "_Layout";
+}
+
+<h2>Admin - Manage All Tasks</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">No tasks found.</div>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>UserId</th>
+                <th style="width:150px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model)
+            {
+                <tr>
+                    <td>@Html.Encode(task.Title)</td>
+                    <td>@Html.Encode(task.Description)</td>
+                    <td>@Html.Encode(task.UserId)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@task.Id" class="btn btn-sm btn-primary me-1">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@task.Id" method="post" class="d-inline">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                    onclick="return confirm('Are you sure you want to delete this task?');">
+                                Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<a asp-controller="Home" asp-action="Dashboard" class="btn btn-secondary">Back</a>

@@ -1,0 +1,26 @@
+@model TaskItem
+@{
+    ViewData["Title"] = "Create Task";
+    Layout = "_Layout";
+}
+
+<h2>Create a New Task</h2>
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control" required />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="TaskList" class="btn btn-secondary">Cancel</a>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
