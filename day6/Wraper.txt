@@ -1,0 +1,101 @@
+Codeshare logo
+ ShareSign UpLog In
+1
+Non -Generic 
+2
+​
+3
+boxing/unboxing
+4
+boxing :- When we convert a value type(like int ) into an object type(reference type)
+5
+​
+6
+int num value1 = 10;
+7
+object boxedvalue = num;  // boxing
+8
+​
+9
+Unboxing  :-  when we extract the value type from an object
+10
+​
+11
+int valuetype = (int)boxedvalue;  // unboxing
+12
+​
+13
+These operations are expensive in performance :- then there will be a memory overhead  ,
+14
+  This one is non type-safe because by mistaken wrong casting can be done which may cause a run time errors
+15
+​
+16
+  List<Student> list = new List<Student>();
+17
+​
+18
+  for(int i=0 ; i<5 ; i++)
+19
+  {
+20
+    Student s = new Student(3434,"df");
+21
+     list.Add(s);
+22
+  }
+23
+​
+24
+  List<int> numbers = new List<int>();
+25
+  numbers.Add(10);  // No boxing
+26
+  int result = numbers[0]; // No Unboxing
+27
+ 
+28
+ // Non-Generic
+29
+  List numbers = new List();
+30
+  numbers.Add(10);  // No boxing
+31
+  int result = numbers[0]; // No Unboxing
+32
+​
+33
+  c# provides some wrapper classes 
+34
+​
+35
+  Wrapper class is a class that wraps value types to provide some extra functionalities
+36
+  System.Object which is the universal 
+37
+​
+38
+  System.Int32 -- wraps -- value type which is int  -- Generic class for type safety at compile time only you are telling to compiler that internally should convert into int
+39
+  System.Double -- wraps -- value type which is Double
+40
+  Whenever we are boxing to an int ,  it is converting it into System.Object but internally it uses System.Int32;
+41
+​
+42
+​
+43
+// See https://aka.ms/new-console-template for more information
+44
+using System.Collections;
+45
+class NonGenericExample
+46
+{
+47
+​
+
+
+
+
+Hide Ads

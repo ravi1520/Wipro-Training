@@ -1,0 +1,14 @@
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\bin\Debug\net9.0\dayy7.exe
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\bin\Debug\net9.0\dayy7.deps.json
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\bin\Debug\net9.0\dayy7.runtimeconfig.json
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\bin\Debug\net9.0\dayy7.dll
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\bin\Debug\net9.0\dayy7.pdb
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\obj\Debug\net9.0\dayy7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\obj\Debug\net9.0\dayy7.AssemblyInfoInputs.cache
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\obj\Debug\net9.0\dayy7.AssemblyInfo.cs
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\obj\Debug\net9.0\dayy7.csproj.CoreCompileInputs.cache
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\obj\Debug\net9.0\dayy7.dll
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\obj\Debug\net9.0\refint\dayy7.dll
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\obj\Debug\net9.0\dayy7.pdb
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\obj\Debug\net9.0\dayy7.genruntimeconfig.cache
+C:\Users\ravin\OneDrive\Desktop\Wipro\dayy7\obj\Debug\net9.0\ref\dayy7.dll
